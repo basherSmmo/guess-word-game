@@ -1,0 +1,167 @@
+* {
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #121111;
+  color: white;
+}
+h1 {
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    background-color: #201f1f;
+}
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 20px;
+}
+.game {
+    width: fit-content;
+    margin: auto;
+}
+.row {
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    gap: 0.7vw;
+    margin-bottom: 1.2vw;
+
+}
+.row * {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 5vw;
+    height: 5vw;
+}
+.row input {
+    font-weight: bold;
+    font-size: 30px;
+}
+.row div {
+    font-size: 30px;
+    min-width: 60px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 4vw;
+    gap: 10px;
+}
+.buttons input {
+    font-size: 17px;
+}
+.buttons input:hover {
+    color: white;
+    cursor: pointer;
+}
+input[value="Check Word"]:hover {
+    background-color: #d84315;
+}
+input[class="hint"]:hover {
+    background-color: #1976d2;
+}
+input {
+    border-radius: 1vw;
+}
+.rules {
+    padding-left: 40px;
+    font-size: 18px;
+    letter-spacing: .5px;
+}
+.rules p {
+    position: relative;
+    padding: 5px 0 5px 45px;
+    margin: 10px 0;
+}
+.rules p::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0px;
+    height: 100%;
+    width: 30px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+.rules .correct::before {
+    background-color: #f09618;
+}
+.rules .midel::before {
+    background-color: #0ba78b;
+}
+.rules .wrong::before {
+    background-color: #272d41;
+}
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    letter-spacing: .5px;
+}
+#result span:first-child {
+    color: #f09618;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#result span:last-child {
+    color: white;
+    font-size: 20px;
+}
+@media (max-width: 700px) {
+    .content {
+        grid-template-columns: 1fr;
+        width: fit-content;
+        margin: auto;
+    }    
+    .row {
+        gap: 5px;
+        margin-bottom: 10px;
+    }
+    .row * {
+        width: 50px;
+        height: 50px;
+    }
+    .buttons {
+        height: 40px;
+    }
+    .rules {
+        margin-top: 30px;
+        padding-left: 0px;
+    }
+}
+@media (max-width: 500px) {
+    .content {
+        padding: 0;
+        margin: auto;
+    }
+    .row * {
+        width: 11vw;
+        height: 11vw;
+    }
+    .buttons {
+        height: 8vw;
+    }
+    .row input {
+        font-size: 20px;
+    }
+    input {
+        border-radius: 10px;
+    }
+    .rules {
+        font-size: 18px;
+        letter-spacing: .5px;
+    }
+    
+}
+@media (max-width: 1200px) {
+    .row div {
+        font-size: 18px;
+    }
+}
+
