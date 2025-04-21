@@ -55,6 +55,7 @@ h1 {
 }
 .buttons input {
     font-size: 17px;
+    transition: background-color 0.3s ease;
 }
 .buttons input:hover {
     color: white;
@@ -92,7 +93,7 @@ input {
 .rules .correct::before {
     background-color: #f09618;
 }
-.rules .midel::before {
+.rules .partial::before {
     background-color: #0ba78b;
 }
 .rules .wrong::before {
